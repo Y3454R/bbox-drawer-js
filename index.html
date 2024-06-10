@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw Bounding Box</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        canvas {
+            border: 1px solid #000;
+            margin-top: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        label, input {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <label>
+            Upload Image:
+            <input type="file" id="imageFile" accept="image/*" required>
+        </label>
+        <label>
+            Bounding Box (left, top, right, bottom):
+            <input type="text" id="bbox" placeholder="e.g., 50, 50, 200, 200" required>
+        </label>
+        <button type="submit">Draw Bounding Box</button>
+    </form>
+    <canvas id="canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
+
